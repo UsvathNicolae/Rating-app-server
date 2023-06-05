@@ -34,7 +34,7 @@ const getAllRatings = async (filters) => {
 }
 
 const deleteRating = async (id) => {
-    await Receipt.destroy({ where: { returnId: id  } })
+    await Receipt.destroy({ where: { ratingId: id  } })
 
     return Rating.destroy({ where: { id } })
 }
