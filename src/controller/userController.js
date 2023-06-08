@@ -22,8 +22,11 @@ const fetchAll = async (req, res) => {
 //login
 const  loginUser = async (req,res) => {
     const payload = req.body;
+    console.log(req)
     try {
+
         const user = await fetchUserByEmail(payload?.email);
+
         if(user){
             const dbPassword = user?.password;
             bcrypt.compare(payload?.password, dbPassword, (err, result) => {
@@ -102,6 +105,7 @@ const  postUser = async (req, res) => {
                 })
             }
             payload.password = hash;
+            payload.licencePlate = "";
             try{
                 const result = await postUserDB(payload);
                 if(result){
