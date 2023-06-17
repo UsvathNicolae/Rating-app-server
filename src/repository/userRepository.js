@@ -22,7 +22,7 @@ const postUserDB = (payload) => {
     return USER.create(payload);
 }
 
-const putUserDB = (id, payload) => {
+const updateUserDB = (id, payload) => {
     return USER.update(payload, {where: { id: id }});
 }
 
@@ -30,4 +30,4 @@ const deleteUserDB = (id) => {
     return USER.destroy({where: { id: id }});
 }
 
-module.exports = { fetchAllUsers, postUserDB, putUserDB, deleteUserDB, fetchUserByUsername, fetchUserById, fetchUserByEmail }
+module.exports = { fetchAllUsers, postUserDB, updateUserDB, deleteUserDB, fetchUserByUsername, fetchUserById, fetchUserByEmail }
