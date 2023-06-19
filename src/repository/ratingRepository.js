@@ -4,6 +4,7 @@ const {Receipt} = require("../models");
 const Rating = require("../models/rating")(sequelize, Sequelize.DataTypes);
 
 const createRating = (payload) => {
+    console.log(payload)
     return Rating.create(payload)
 }
 

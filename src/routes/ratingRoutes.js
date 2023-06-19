@@ -10,7 +10,7 @@ router.delete('/:id', checkAuth, RatingService.deleteRating)
 
 router.get('/', checkAuth, RatingService.getAll)
 
-router.post("/", checkAuth, RatingService.postRating);
+router.post("/create", checkAuth, RatingService.postRating);
 
 
 

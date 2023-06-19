@@ -38,7 +38,7 @@ const postRating = async (req, res) => {
         const result = await createRating(payload);
         if(result){
             res.status(200).json({
-                message: 'New product successfully added'
+                message: 'New rating successfully added'
             })
         }
     } catch (err){
