@@ -22,9 +22,10 @@ const update = async (id, payload) => {
 
 const getAllRatings = async (filters) => {
     let queryFilters = {}
+    console.log(filters)
 
-    if(filters && filters.userId) {
-        queryFilters = { ...queryFilters, userId: filters.userId }
+    if(filters && filters.licencePlate) {
+        queryFilters = { ...queryFilters, licencePlate: filters.licencePlate }
     }
 
     return Rating.findAll({
