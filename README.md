@@ -1,12 +1,12 @@
 # Rating-app-server
 
-# Technologies:
+## Technologies:
 Nodejs
 
-# Database:
+## Database:
 MySQL + Sequalize ORM
 
-# Starting project:
+## Starting project:
 
 Install docker desktop
 
