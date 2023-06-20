@@ -1,5 +1,15 @@
 const SEED_USERS = [
     {
+        username: "Guest",
+        password: 'Guest',
+        firstName:'Guest',
+        lastName:'Guest',
+        email: 'Guest',
+        licencePlate:'',
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+    {
         username: "Nicu02",
         password: 'parola',
         firstName:'Nicolae',
