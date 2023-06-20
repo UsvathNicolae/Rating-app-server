@@ -1,7 +1,7 @@
 const SEED_USERS = [
     {
         username: "Guest",
-        password: 'Guest',
+        password: '$2b$10$.jrbF51OefHQKGbps64J/eoNmMPCymmOpWEvkTxkxb7QEf7kya1ge',
         firstName:'Guest',
         lastName:'Guest',
         email: 'Guest',
@@ -11,7 +11,7 @@ const SEED_USERS = [
     },
     {
         username: "Nicu02",
-        password: 'parola',
+        password: '$2b$10$eLVEsIsH4oGAlq/SVXaXpet53Idkxqbf2ikHAXr8ohmhv3GNzMrS.',
         firstName:'Nicolae',
         lastName:'Usvath',
         email: 'nicu_usvath@yahoo.com',
