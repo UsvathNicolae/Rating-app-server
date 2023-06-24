@@ -3,7 +3,7 @@ const UserRepository = require('../repository/userRepository')
 const {User} = require("../models");
 const sequelize = require("../configs/sequelize/connection");
 const Sequelize = require("sequelize");
-const {createRating} = require("../repository/ratingRepository");
+const {createRating, fetchById} = require("../repository/ratingRepository");
 const USER = require('../models/user')(sequelize, Sequelize.DataTypes);
 
 const getAll = async (req, res) => {
@@ -50,6 +50,41 @@ const postRating = async (req, res) => {
     }
 };
 
+const likeRating = async (req, res) =>{
+    const { id } = req.params
+    const payload = req.body;
+
+    const rating = await fetchById(id)
+    if(payload.userId){
+        if(!rating.likedBy.includes(payload.userId)){
+            rating.likedBy =  `${rating.likedBy},${payload.userId}`
+        }else{
+            const regex = new RegExp(`,${payload.userId}`)
+            rating.likedBy = rating.likedBy.replace(regex,'')
+        }
+        await RatingRepository.update(id, {likedBy: rating.likedBy})
+    }
+    return res.status(200).json({
+        message: 'Rating liked'
+    })
+}
+
+const setSeenRatings = async (req, res) =>{
+    const payload = req.body;
+    console.log(payload)
+    if(payload.userId){
+        let ratings = await RatingRepository.getAllRatings()
+        ratings.map(async (rating) =>{
+            if(!rating.seenBy.includes(payload.userId)){
+                rating.seenBy = `${rating.seenBy},${payload.userId}`
+                await RatingRepository.update(rating.id, {seenBy: rating.seenBy})
+            }
+        })
+    }
+    return res.status(200).json({
+        message: 'Ratings seen'
+    })
+}
 
 
-module.exports = { postRating, getAll, updateRating, deleteRating }
+module.exports = { postRating, getAll, updateRating, deleteRating, likeRating, setSeenRatings }

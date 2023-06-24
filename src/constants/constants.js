@@ -40,6 +40,8 @@ const SEED_RATINGS = [
         img: '',
         licencePlate:'TM15DAN',
         anonymous:false,
+        likedBy:'',
+        seenBy:'',
         createdAt: new Date(),
         updatedAt: new Date()
     },
@@ -50,6 +52,8 @@ const SEED_RATINGS = [
         stars:5,
         img: '',
         licencePlate:'TM94LIS',
+        likedBy:'',
+        seenBy:'',
         anonymous:false,
         createdAt: new Date(),
         updatedAt: new Date()
@@ -61,6 +65,8 @@ const SEED_RATINGS = [
         stars:4,
         img: '',
         licencePlate:'TM56HDS',
+        likedBy:'',
+        seenBy:'',
         anonymous:false,
         createdAt: new Date(),
         updatedAt: new Date()
@@ -72,6 +78,8 @@ const SEED_RATINGS = [
         stars:1,
         img: '',
         licencePlate:'TM56SQL',
+        likedBy:'',
+        seenBy:'',
         anonymous:true,
         createdAt: new Date(),
         updatedAt: new Date()
@@ -83,6 +91,8 @@ const SEED_RATINGS = [
         stars:1,
         img: '',
         licencePlate:'TM64ASG',
+        likedBy:'',
+        seenBy:'',
         anonymous:true,
         createdAt: new Date(),
         updatedAt: new Date()
@@ -94,6 +104,8 @@ const SEED_RATINGS = [
         stars:1,
         img: '',
         licencePlate:'TM88LKY',
+        likedBy:'',
+        seenBy:'',
         anonymous:true,
         createdAt: new Date(),
         updatedAt: new Date()

@@ -31,7 +31,7 @@ const getAllRatings = async (filters) => {
     return Rating.findAll({
         where: {
             ...queryFilters
-        }
+        },order: [['createdAt', 'DESC']]
     })
 }
 
