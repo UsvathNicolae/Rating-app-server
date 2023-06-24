@@ -12,6 +12,10 @@ router.get('/', checkAuth, RatingService.getAll)
 
 router.post("/create", checkAuth, RatingService.postRating);
 
+router.post("/like/:id", checkAuth, RatingService.likeRating);
+
+router.post("/setSeen", checkAuth, RatingService.setSeenRatings);
+
 
 
 module.exports = router;

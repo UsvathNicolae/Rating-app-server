@@ -26,8 +26,9 @@ module.exports = (sequelize, DataTypes) => {
         stars: DataTypes.INTEGER,
         img: DataTypes.BLOB('long'),
         licencePlate: DataTypes.STRING,
-        anonymous: DataTypes.BOOLEAN
-
+        anonymous: DataTypes.BOOLEAN,
+        likedBy:DataTypes.STRING,
+        seenBy:DataTypes.STRING
     }, {
         sequelize,
         modelName: 'Rating',

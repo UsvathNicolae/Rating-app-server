@@ -30,6 +30,14 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
+      likedBy: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      seenBy: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
       anonymous: {
         type: Sequelize.BOOLEAN,
         allowNull: false,

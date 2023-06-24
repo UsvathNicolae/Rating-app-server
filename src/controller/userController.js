@@ -133,7 +133,6 @@ const  postUser = async (req, res) => {
 };
 
 const updateUser = async (req, res) => {
-    console.log("Aici")
     const { id } = req.params;
     const payload = req.body;
     try{
