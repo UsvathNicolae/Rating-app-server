@@ -22,7 +22,6 @@ const fetchAll = async (req, res) => {
 //login
 const  loginUser = async (req,res) => {
     const payload = req.body;
-    console.log(req)
     try {
 
         const user = await fetchUserByEmail(payload?.email);
